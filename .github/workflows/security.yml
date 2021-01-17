@@ -1,0 +1,36 @@
+name: Security
+
+on:
+    push:
+      branches: [ master ]
+    pull_request:
+      branches: [ master ]
+
+jobs:
+    detect_secrets:
+        name: Run Detect Secrets
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Detect Secrets
+          uses: evanextreme/detect-secrets-action@1.0.0
+
+    trufflehog:
+        name: Running trufflehog
+        runs-on: ubuntu-latest
+
+        steps:
+        - uses: actions/checkout@v2
+
+        - name: Running trufflehog
+          uses: UnicornGlobal/trufflehog-actions-scan@master
+
+    yelp_detect_secrets:
+        name: Running Yelp Detect Secrets
+        runs-on: ubuntu-latest
+
+        steps:
+        - uses: actions/checkout@v2
+
+        - name: yelp-detect-secrets
+          uses: evanextreme/detect-secrets-action@1.0.0
