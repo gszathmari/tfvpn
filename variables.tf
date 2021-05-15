@@ -1,12 +1,15 @@
-variable "api_key" {
+variable "linode_api_key" {
   type        = string
   description = "Linode API key"
+}
+
+variable "firewall" {
+  description = "Enables Cloud Firewall"
 }
 
 variable "region" {
   type        = string
   description = "Linode region"
-  default     = "ap-northeast"
 }
 
 variable "vpn_username" {

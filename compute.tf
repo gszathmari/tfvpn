@@ -15,7 +15,8 @@ resource "linode_instance" "vpn" {
     VPN_IPSEC_PSK = random_password.psk.result
   }
   alerts {
-    cpu = 80
+    cpu            = 80
+    transfer_quota = 90
   }
 }
 
