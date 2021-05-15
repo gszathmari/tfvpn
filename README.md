@@ -50,7 +50,12 @@ To deploy your VPN service, simply run the following commands:
 
 1. Once Terraform finishes the deployment of tfvpn, wait a minute or two and your VPN service is ready to accept new connections.
 
-1. The VPN connection details (IP address, username and password) are displayed on the terminal screen.
+1. The VPN connection details are the following:
+
+    - IP address: Run `terraform show -json | jq -r .values.outputs.ipv4.value` to display.
+    - Username: Fixed to **vpnuser**
+    - Password: Run `terraform show -json | jq -r .values.outputs.password.value` to display.
+    - IPSec PSK: Run `terraform show -json | jq -r .values.outputs.psk.value` to display.
 
 ## Client configuration
 
