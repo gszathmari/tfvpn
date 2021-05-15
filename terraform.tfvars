@@ -1,5 +1,5 @@
 # Retrieve the availabile regions with `curl https://api.linode.com/v4/regions | jq`
-region = "ap-west"  ## Mumbai, IN
+region = "ap-west" # Mumbai, IN
 
 # Cloud Firewall is only supported in:
 # - Mumbai, IN
