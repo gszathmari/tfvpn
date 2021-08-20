@@ -38,6 +38,8 @@ To deploy your VPN service, simply run the following commands:
    terraform init
    ```
 
+1. Edit the `terraform.tfvars` file to choose your favourite geographical region for your VPN service.
+
 1. Then run `terraform apply` to launch the hosting infrastructure:
 
    ```sh
